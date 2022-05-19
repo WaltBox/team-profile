@@ -178,9 +178,10 @@ function init() {
     inquirer
         .prompt(questions)
         .then(userResponses => {
+            createManager(userResponses)
             addMember();
            
-           // console.log('...DONE BITCH');
+            console.log('...DONE BITCH');
         })
         .catch(err => console.error(err));
 }

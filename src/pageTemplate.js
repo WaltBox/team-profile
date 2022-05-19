@@ -2,13 +2,14 @@ const generateManager = function (manager) {
   return `
   <div class= "row">
   <div class ="col s12 m6">
-  <div class ="card blue-grey darken-1">
+  <div class ="card blue darken-1">
   <div class ="card-content white-text"> 
   <span class ="card-title"> Manager: ${manager.name} </span>
-  <p> ID number: ${manager.id} </p>
+  
   <p> Office Number: ${manager.officeNumber} 
   </div>
-  <div class = "card-action">
+  <div class = "card-action grey lighten-5">
+  <p> ID number: ${manager.id} </p>
   <a href="mailto:${manager.email}">${manager.email}</a>
    </div>
    </div>
@@ -21,12 +22,12 @@ const generateEngineer = function (engineer) {
  return `
  <div class= "row">
   <div class ="col s12 m6">
-  <div class ="card blue-grey darken-1">
+  <div class ="card blue darken-1">
   <div class ="card-content white-text"> 
   <span class ="card-title"> Engineer: ${engineer.name} </span>
-  <p> ID: ${engineer.id} </p>
   </div>
-  <div class = "card-action">
+  <div class = "card-action grey lighten-5">
+  <p> ID: ${engineer.id} </p>
   <a href="mailto:${engineer.email}">${engineer.email}</a>
    <a href ="${engineer.github}"> Github</a>
    </div>
@@ -40,13 +41,14 @@ const generateIntern = function (intern) {
  return `
  <div class= "row">
   <div class ="col s12 m6">
-  <div class ="card blue-grey darken-1">
+  <div class ="card blue darken-1">
   <div class ="card-content white-text"> 
   <span class ="card-title"> Engineer: ${intern.name} </span>
-  <p> ID: ${intern.id} </p>
+  
   <p> School:${intern.school}
   </div>
-  <div class = "card-action">
+  <div class = "card-action grey lighten-5">
+  <p> ID: ${intern.id} </p>
    <a href="mailto:${intern.email}">${intern.email}</a>
   
    </div>
@@ -90,6 +92,7 @@ const generateTeamPage = function(employeeCards) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Document</title>
 </head>
 <body>

@@ -114,6 +114,15 @@ function addMember (){
         }
     })
 }
+function createManager() {
+    inquirer
+        .prompt(questions)
+        .then(answer => {
+            const manager = new Manager(answer.managerName, answer.managerId, answer.managerEmail, answer.managerOfficeNumber)
+            teamArr.push(manager)
+            addMember();
+        })
+}
 
 function createEngineer() {
     inquirer

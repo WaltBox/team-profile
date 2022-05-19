@@ -9,7 +9,7 @@ const generateManager = function (manager) {
   <p> Office Number: ${manager.officeNumber} 
   </div>
   <div class = "card-action">
-   <a href="${manager.email}">Email</a>
+  <a href="mailto:${manager.email}">${manager.email}</a>
    </div>
    </div>
    </div>
@@ -24,10 +24,10 @@ const generateEngineer = function (engineer) {
   <div class ="card blue-grey darken-1">
   <div class ="card-content white-text"> 
   <span class ="card-title"> Engineer: ${engineer.name} </span>
-  <p> Engineer ID: ${engineer.id} </p>
+  <p> ID: ${engineer.id} </p>
   </div>
   <div class = "card-action">
-   <a href="${engineer.email}">Email</a>
+  <a href="mailto:${engineer.email}">${engineer.email}</a>
    <a href ="${engineer.github}"> Github</a>
    </div>
    </div>
@@ -43,11 +43,11 @@ const generateIntern = function (intern) {
   <div class ="card blue-grey darken-1">
   <div class ="card-content white-text"> 
   <span class ="card-title"> Engineer: ${intern.name} </span>
-  <p> Engineer ID: ${intern.id} </p>
+  <p> ID: ${intern.id} </p>
   <p> School:${intern.school}
   </div>
   <div class = "card-action">
-   <a href="${intern.email}">Email</a>
+   <a href="mailto:${intern.email}">${intern.email}</a>
   
    </div>
    </div>
@@ -73,7 +73,7 @@ for (let i = 0; i < data.length; i++) {
   }
   if (role === 'Intern') {
     const internCard = generateIntern(employee);
-    page.Array.push(internCard);
+    pageArray.push(internCard);
   }
 }
 

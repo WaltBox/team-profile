@@ -174,18 +174,22 @@ function addMember (){
     })
 }
 
-function init() {
+/*function init() {
     inquirer
         .prompt(questions)
         .then(userResponses => {
             createManager(userResponses)
             addMember();
            
-            console.log('...DONE BITCH');
+            console.log('...DONE');
         })
         .catch(err => console.error(err));
 }
+*/
 
+function init() {
+    createManager()
+}
 
 init();
 
